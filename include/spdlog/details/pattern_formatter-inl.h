@@ -14,6 +14,7 @@
 #include <spdlog/formatter.h>
 
 #include <array>
+#include <cassert>
 #include <chrono>
 #include <ctime>
 #include <cctype>
