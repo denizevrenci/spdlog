@@ -30,12 +30,13 @@ if (NOT CMAKE_CXX_STANDARD)
     set(CMAKE_CXX_STANDARD_REQUIRED ON)
 endif()
 
-set(CMAKE_CXX_EXTENSIONS  OFF)
+if(NOT DEFINED CMAKE_CXX_EXTENSIONS)
+   set(CMAKE_CXX_EXTENSIONS  OFF)
+endif()
 
 if(CMAKE_SYSTEM_NAME MATCHES "CYGWIN")
 	set(CMAKE_CXX_EXTENSIONS ON)
 endif()
-
 
 #---------------------------------------------------------------------------------------
 # Set SPDLOG_MASTER_PROJECT to ON if we are building spdlog
